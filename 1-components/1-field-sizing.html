@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Wrapped 2024 | Field Sizing</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    html {
+      color-scheme: dark light;
+    }
+
+    body {
+      line-height: 1.5;
+      height: 100vh;
+      font-family: sans-serif;
+
+      display: grid;
+      place-content: center;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    main {
+      display: grid;
+      place-items: center;
+      gap: .5rem;
+
+      textarea {
+        padding: 1rem .5rem;
+        field-sizing: content;
+        min-block-size: 3.5rlh;
+        min-inline-size: 23ch;
+        max-inline-size: 50ch;
+      }
+
+      select {
+        padding: .5rem;
+        field-sizing: content;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>CSS field-sizing</h1>
+
+  <main>
+    <h5>Textarea</h5>
+    <textarea placeholder="Tulis deskripsi…"></textarea>
+
+    <h5>Select</h5>
+    <select>
+      <option>Pilih opsi</option>
+      <option>ok</option>
+      <option>pendek</option>
+      <option>lumayan panjang</option>
+      <option>terlalu panjang jadi susah untuk diatur styling nya</option>
+    </select>
+  </main>
+</body>
+
+</html>

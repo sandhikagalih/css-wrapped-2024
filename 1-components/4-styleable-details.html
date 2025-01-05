@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Wrapped 2024 | Exclusive Details</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      color-scheme: dark light;
+    }
+
+    body {
+      line-height: 1.5;
+      font-family: sans-serif;
+      max-width: 50%;
+      margin: 0 auto;
+      min-height: 100vh;
+      padding: 2em;
+    }
+
+    h1,
+    h2 {
+      text-align: center;
+    }
+
+    .course {
+      section {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        width: min-content;
+        margin: 3rem auto;
+      }
+
+      details {
+        display: flex;
+        flex-direction: row;
+        background: salmon;
+
+        height: 30rem;
+        border-radius: 2rem;
+        overflow: hidden;
+
+        ::marker {
+          content: '';
+        }
+
+        summary {
+          padding: 1rem;
+          width: 5rem;
+          flex-shrink: 0;
+          text-align: center;
+
+          span {
+            cursor: pointer;
+            display: grid;
+            place-content: center;
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background: rgb(0 0 0 / 0.25);
+            padding: 0;
+          }
+        }
+
+        &:hover,
+        &:has(summary:focus) {
+          outline: 3px solid white;
+          outline-offset: 3px;
+        }
+
+        *:not(summary) {
+          padding: 1em;
+        }
+      }
+    }
+
+    .details-content-wrapper {
+      padding: 1.5rem 1em;
+      width: min(30vw, 300px);
+
+      p {
+        font-size: .9em;
+        transform: translateY(2rem);
+        opacity: 0;
+        transition: all 0.5s ease;
+        transition-delay: 0.5s;
+      }
+
+      [open] & p {
+        transform: none;
+        opacity: 1;
+        transition-delay: 0.5s;
+      }
+    }
+
+    ::details-content {
+      transition: width 0.5s ease, content-visibility 0.5s ease allow-discrete;
+      width: 0;
+    }
+
+    [open]::details-content {
+      width: min(30vw, 300px);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>Belajar Web Bareng Pa Dhika</h1>
+    <div class="course">
+      <h2>wpucourse.id</h2>
+
+      <section>
+        <details name="wpucourse" open>
+          <summary><span>1</span></summary>
+          <div class="details-content-wrapper">
+            <h4>Belajar MERN</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni nemo nulla veniam alias iusto quasi nam
+              tempore ipsa sed amet!</p>
+          </div>
+        </details>
+
+        <details name="wpucourse">
+          <summary><span>2</span></summary>
+          <div class="details-content-wrapper">
+            <h4>Belajar Laravel</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati magnam dicta delectus esse hic? Dolor
+              harum amet magnam quibusdam aliquam sint soluta nam in.</p>
+          </div>
+        </details>
+
+        <details name="wpucourse">
+          <summary><span>3</span></summary>
+          <div class="details-content-wrapper">
+            <h4>Belajar Apa Lagi?</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab omnis a nihil recusandae esse aperiam veniam
+              provident facere, modi natus, tempore qui.</p>
+          </div>
+        </details>
+      </section>
+    </div>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Wrapped 2024 | Anchor Positioning</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    html {
+      background: #eee;
+    }
+
+    body {
+      height: 100vh;
+      font-family: sans-serif;
+      display: grid;
+      place-content: center;
+    }
+
+    .anchor {
+      overflow: clip;
+      border-radius: 30px;
+      outline: 1px solid #0002;
+      max-inline-size: min(50vw, 480px);
+
+      >img {
+        display: flex;
+        max-inline-size: 100%;
+      }
+
+    }
+
+    .positioned-element {
+      font-size: 2rem;
+      font-weight: bold;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      box-shadow: 0 5px 10px #0003;
+    }
+
+    .anchor {
+      anchor-name: --over-easy;
+    }
+
+    .positioned-element {
+      position: fixed;
+      position-anchor: --over-easy;
+      position-area: inline-end center;
+      margin: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="anchor">
+    <img src="https://assets.codepen.io/2585/image_fx_.jpg" alt="a smiling sunny side up egg made of clay" />
+  </div>
+
+  <div class="positioned-element">
+    Over-Easy
+  </div>
+
+</body>
+
+</html>
