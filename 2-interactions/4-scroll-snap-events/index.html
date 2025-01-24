@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Snap Events | CSS Wrapped 2024</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Scroll Snap Event Visualizer</h1>
+  <main>
+    <div>
+      <p>Snap Change</p>
+      <output id="snapchange" aria-live="polite"></output>
+    </div>
+    <section id="scroller" tabindex="0">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+    </section>
+    <div>
+      <p>Snap Changing</p>
+      <output id="snapchanging" aria-live="polite"></output>
+    </div>
+  </main>
+
+  <footer>
+    <label for="snapalign">Align to:</label>
+    <select id="snapalign">
+      <option>center</option>
+      <option>start</option>
+      <option>end</option>
+    </select>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

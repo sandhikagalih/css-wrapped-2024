@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Scrollbar | CSS Wrapped 2024</title>
+  <style>
+    html {
+      height: 1500px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      /* scrollbar-color: orange teal;
+      scrollbar-width: 10%; */
+    }
+
+    /* Width */
+    html::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Track */
+    html::-webkit-scrollbar-track {
+      background: red;
+    }
+
+    /* Handle */
+    html::-webkit-scrollbar-thumb {
+      background: blue;
+      border-radius: 10px;
+    }
+
+    main {
+      max-width: 40em;
+      width: 90vw;
+      margin: 5em auto;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .scroller {
+      border: 1px solid #000;
+      width: 100%;
+      height: 50vh;
+      background: white;
+      overflow-y: auto;
+
+      .content {
+        min-height: 75vh;
+        padding: 1rem 1rem;
+
+        *:first-child {
+          margin-top: 0;
+        }
+
+        *:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .scroller {
+      --scrollbar-color-thumb: #ff69b4;
+      --scrollbar-color-track: #00f;
+      --scrollbar-width: thin;
+      --scrollbar-width-legacy: 0.5rem;
+
+      /* scrollbar-color: var(--scrollbar-color-thumb) var(--scrollbar-color-track);
+      scrollbar-width: var(--scrollbar-width); */
+    }
+
+    .scroller::-webkit-scrollbar-thumb {
+      background: var(--scrollbar-color-thumb);
+      border-radius: 10px;
+    }
+
+    .scroller::-webkit-scrollbar-track {
+      background: var(--scrollbar-color-track);
+      border-radius: 10px;
+    }
+
+    .scroller::-webkit-scrollbar {
+      max-width: var(--scrollbar-width-legacy);
+      max-height: var(--scrollbar-width-legacy);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>Belajar CSS</h1>
+    <div class="scroller">
+      <div class="content">
+        <p>CSS (Cascading Style Sheets) adalah bahasa pemrograman yang digunakan untuk mendesain dan mengatur tampilan
+          elemen-elemen dalam sebuah halaman web. Bayangkan HTML sebagai kerangka rumah, nah CSS inilah yang akan
+          menentukan warna cat, jenis lantai, model jendela, dan semua detail visual lainnya yang membuat rumah tersebut
+          terlihat menarik.</p>
+        <p>CSS bekerja dengan memilih elemen HTML tertentu dan memberikan properti gaya kepada mereka. Misalnya, Anda
+          dapat memilih semua paragraf (&lt;p&gt;&lt;/p&gt;) di halaman web dan mengatur warna teksnya menjadi merah,
+          ukuran font menjadi 16px, dan jenis font menjadi
+          Arial. CSS menawarkan berbagai macam properti untuk mengontrol hampir setiap aspek visual dari elemen HTML,
+          mulai dari warna, ukuran, dan posisi hingga latar belakang, batas, dan efek visual lainnya.</p>
+        <p>Dengan memahami dasar-dasar CSS dan cara menerapkannya, Anda dapat mulai mendesain halaman web yang menarik
+          dan sesuai dengan keinginan Anda. CSS adalah alat yang sangat powerful dan fleksibel, dan dengan latihan yang
+          cukup, Anda dapat membuat desain web yang menakjubkan.</p>
+        <p>Penting juga untuk memahami konsep "selector" dalam CSS. Selector adalah cara kita memilih elemen HTML yang
+          ingin diberi gaya. Selector dapat berupa nama tag HTML (contoh: p, h1, div), class (contoh: .container,
+          .judul), atau ID (contoh: #header, #footer). Dengan menggunakan selector yang tepat, kita dapat menargetkan
+          elemen spesifik atau sekelompok elemen dengan karakteristik tertentu.</p>
+        <p>CSS juga mendukung konsep "inheritance" dimana beberapa properti gaya dapat diwariskan dari elemen induk ke
+          elemen anak. Misalnya, jika Anda mengatur warna font pada elemen
+
+          &lt;body&gt;, maka semua elemen di dalamnya (seperti &lt;p&gt;,
+          &lt;h1&gt;, &lt;div&gt;) akan mewarisi warna font tersebut, kecuali jika Anda secara eksplisit mengganti
+          warnanya pada
+          elemen anak tersebut.
+        </p>
+        <p>Dengan mempelajari lebih lanjut tentang selector, inheritance, dan berbagai properti CSS lainnya, Anda dapat
+          menciptakan desain web yang lebih kompleks dan profesional. CSS menyediakan kontrol yang sangat detail atas
+          tampilan halaman web, memungkinkan Anda untuk mewujudkan kreativitas dan membangun user interface yang menarik
+          dan mudah digunakan. Selamat belajar dan bereksperimen dengan CSS!</p>
+      </div>
+    </div>
+  </main>
+  </script>
+</body>
+
+</html>
