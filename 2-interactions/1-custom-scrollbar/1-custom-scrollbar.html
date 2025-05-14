@@ -10,25 +10,25 @@
       height: 1500px;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 20px;
-      /* scrollbar-color: orange teal;
-      scrollbar-width: 10%; */
+      scrollbar-color: orange teal;
+      scrollbar-width: 10%;
     }
 
     /* Width */
-    html::-webkit-scrollbar {
-      width: 10px;
-    }
+    /* ::-webkit-scrollbar {
+      width: 5px;
+    } */
 
     /* Track */
-    html::-webkit-scrollbar-track {
+    /* ::-webkit-scrollbar-track {
       background: red;
-    }
+    } */
 
     /* Handle */
-    html::-webkit-scrollbar-thumb {
+    /* ::-webkit-scrollbar-thumb {
       background: blue;
       border-radius: 10px;
-    }
+    } */
 
     main {
       max-width: 40em;
@@ -65,13 +65,12 @@
       --scrollbar-color-thumb: #ff69b4;
       --scrollbar-color-track: #00f;
       --scrollbar-width: thin;
-      --scrollbar-width-legacy: 0.5rem;
 
-      /* scrollbar-color: var(--scrollbar-color-thumb) var(--scrollbar-color-track);
-      scrollbar-width: var(--scrollbar-width); */
+      scrollbar-color: var(--scrollbar-color-thumb) var(--scrollbar-color-track);
+      scrollbar-width: var(--scrollbar-width);
     }
 
-    .scroller::-webkit-scrollbar-thumb {
+    /* .scroller::-webkit-scrollbar-thumb {
       background: var(--scrollbar-color-thumb);
       border-radius: 10px;
     }
@@ -84,7 +83,7 @@
     .scroller::-webkit-scrollbar {
       max-width: var(--scrollbar-width-legacy);
       max-height: var(--scrollbar-width-legacy);
-    }
+    } */
   </style>
 </head>
 
